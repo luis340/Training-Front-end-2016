@@ -1,0 +1,96 @@
+
+body{
+	background-color: #808080;
+
+}
+
+.conteiner {
+	
+	margin:0 auto;
+
+		
+
+
+}
+.contenedor2 {
+	display: inline-block;
+	margin:0 auto;
+
+
+
+		
+
+
+}
+
+.photo{
+	 
+	 display: inline-block;
+	 width: 20%;
+
+	 
+
+
+}
+
+
+.bienvenido {margin:10px;
+	padding:10px;
+	color: white ;
+	text-align: center;
+	text-decoration: underline;
+	background-image: url(landscape.jpg);
+	background-position: center;
+	text-decoration: bold;
+
+}
+
+.texto {
+	color: white;
+	display: inline;
+	border-color: white;
+
+
+
+}
+
+.parrafo{color: white;
+		border: 5px solid white;
+		font-family: cursive;
+		display: inline-block;
+		width: 60%;
+
+
+		
+
+
+
+}
+.row{
+	display:inline-block;
+	width: 90%;
+	}
+
+
+footer{
+		text-align: center;
+		background-color: white;
+		line-height: 300%;
+}	
+
+
+.golbal{
+		padding: 1%;
+		height: 50%;
+		width: 50%;
+
+
+}
+
+-----------------------estilo dos-------------
+
+.recta{
+	background-color: red;
+	
+}
+

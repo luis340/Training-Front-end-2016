@@ -1,0 +1,50 @@
+body {background: url(./imagenes/gibson.jpg); background-repeat: no-repeat; background-attachment: fixed }
+
+
+/*estilos menu principal*/
+#button {
+padding: 0;
+}  
+#button li {
+display:inline;
+}
+#button li a {  
+
+width: 4.9cm;
+height: 0.3cm; 
+font-family: arial black;  
+font-size:12px;  
+text-decoration: none;  
+float:left;  
+padding: 10px;  
+background-color: black;  
+color:white;  
+}  
+#button li a:hover {  
+background-color: grey;  
+margin-top:-5px;  
+padding-bottom:12px;  
+}  
+
+/*estilos menu administrador*/
+
+
+
+
+
+
+
+
+#menu {
+width: 30cm;
+}
+
+#global{
+width:1024px;
+margin:4px auto;
+} 
+
+
+
+
+
