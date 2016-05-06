@@ -1,0 +1,86 @@
+body{
+	background-color: grey;
+	background: url(img/fondo.jpg) 
+
+}
+
+.contenedor{
+	
+	background:rgba(255,255,255,0.3);
+	width: 100%;	
+	
+	
+	
+
+}
+.menu {
+
+	text-align: right;
+
+
+
+}
+
+
+.menu li {
+	display: inline-block;
+	margin: 1%;
+	padding: auto;
+	font-family:"helvetica neue","Open sans",Arial,sans-serif;
+	color: white;
+
+}
+
+.menu li a {
+
+		text-decoration: none;
+
+
+
+}
+
+.menu li a:hover {
+
+	color:orange;
+
+}
+.menu a:visited{
+
+	color:white;
+	text-decoration: none;
+	
+}
+
+
+
+
+.colu_menu{
+	display: inline-block;
+	width: 60%;
+		
+
+}
+.colu_img{
+	display: inline-block;
+	width: 37%;
+	margin: 1%;	
+
+}
+
+
+
+.logo {
+
+
+	
+			
+	   
+}
+
+.row{
+	
+	
+
+
+}
+
