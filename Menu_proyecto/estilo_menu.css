@@ -13,8 +13,9 @@ body{
 	
 
 }
-.menu{
-	text-align: center;
+.menu {
+
+	text-align: right;
 
 
 
@@ -25,25 +26,27 @@ body{
 	display: inline-block;
 	margin: 1%;
 	padding: auto;
-	font-family:cursive;
+	font-family:"helvetica neue","Open sans",Arial,sans-serif;
 	color: white;
 
 }
 
 .menu li a {
+
 		text-decoration: none;
 
 
 
 }
 
-.menu li :hover {
+.menu li a:hover {
 
 	color:orange;
 
 }
-.menu li :visited{	
-	
+.menu a:visited{
+
+	color:white;
 	text-decoration: none;
 	
 }
