@@ -1,0 +1,39 @@
+body{
+	
+
+}
+
+.text p{
+	font-weight: bold;
+
+}
+
+.contenedor{
+	width: 100%;
+	text-align: left;
+	margin-left: 10%;
+
+
+}
+
+/*Css DEL MENU	*/
+h1 a:link{
+	color:red;
+	text-decoration: none;
+}
+h1 a:visited{
+	color:orange;
+	text-decoration: none;
+
+
+}
+h1 a:hover{
+	color:black;
+	text-decoration: underline;
+}
+h1 a:active{
+	color:yellow;
+
+
+}
+
