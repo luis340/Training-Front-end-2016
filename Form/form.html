@@ -1,8 +1,11 @@
 <html>
 <head>
 	<title>Forms</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 	<div class="row">
@@ -16,9 +19,9 @@
 		<div class="col-md-6">
 			<form class="form-horizontal">
 				<div class="form-group">
-					<label class="col-sm-2 control-label" for="ele">Element1 Has a Long Label</label>
+					<label class="col-sm-2 control-label" for="ele2">Element1 Has a Long Label</label>
 					<div class="col-md-4">
-						<select class="form-control" id="ele">
+						<select class="form-control" id="ele2">
 							<option>Item 1</option>
 							<option>Item 2</option>
 							<option>Item 3</option>
@@ -30,10 +33,11 @@
 			</form>	
 			
 			<form class="form-horizontal">
-				<div class="form-group">
+				<div class="form-group has-feedback">
 					<label class="col-sm-2 control-label" for="date">Date</label>
 					<div class="col-md-4">
 						<input type="text"class="form-control" id="date" placeholder=""></input>
+						<span id="date" class="glyphicon glyphicon-calendar form-control-feedback"> </span>
 						
 						<span class="help-block">Select a valid date
 						</span>
@@ -41,6 +45,29 @@
 				</div><!-- div final del form-group -->
 			</form>
 
+			<form class="form-horizontal">
+				<div class="form-group has-feedback">
+					<label class="col-sm-2 control-label" for="ele">Element2</label>
+					<div class="col-md-4">
+						<input type="text"class="form-control" id="ele" placeholder=""></input>
+						<span id="ele" class=" glyphicon glyphicon-remove form-control-feedback"></span>
+						<span id="ele" class="sr-only">(error)</span>
+						<span class="help-block">Click X to clear contets
+						</span>
+					</div>
+				</div><!-- div final del form-group -->
+			</form>
+
+
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="ele">Element3</label>
+					<div class="col-md-4">
+						<input type="text"class="form-control" id="text" placeholder=""></input>
+						
+					</div>
+				</div><!-- div final del form-group -->
+			</form>
 
 
 		</div> <!-- div final del col6 -->
@@ -49,7 +76,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label" for="ele">Element5 </label>
 					<div class="col-md-4">
-						<input type="text"class="form-control" id="date" placeholder=""></input>
+						<input type="text"class="form-control input-lg" id="date" placeholder=""></input>
 						<span class="help-block">Large size input box
 						</span>
 					</div>
@@ -59,12 +86,27 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label" for="ele6">Element6 </label>
 					<div class="col-md-4">
-						<input type="text"class="form-control" id="ele6" placeholder=""></input>
+						<input type="date"class="form-control" id="ele6" placeholder=""></input>
 						<span class="help-block">Small size input box
 						</span>
 					</div>
 				</div><!-- div final del form-group -->
 			</form>
+
+			<form class="form-horizontal">
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="ele6">Element6 </label>
+					<div class="col-md-4">
+						<textarea type="textarea"class="form-control" id="ele6" placeholder="" ></textarea>
+						
+					</div>
+				</div><!-- div final del form-group -->
+			</form>
+
+			<button>Cancel <span class="glyphicon glyphicon-remove"></span> </button>
+			<button>Reset Point <span class=" glyphicon glyphicon-refresh"></span></button>
+			<button>Save Data <span class=" glyphicon glyphicon-cloud-upload"></span> </button>
+
 
 
 		</div> <!--div final del col6-->
