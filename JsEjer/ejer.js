@@ -65,5 +65,29 @@ sumW(); //Llamo a la funcion sumaWhile
 recu();	//Llamo a la funcion sumaRecurcion
 
 
+var vector1 = new Array(5);
+var vector2 = new Array(5);
+var vector3 = new Array(10);
+var i;
+var j;
+
+for (i = 0; i < 5; i++) {
+  vector1[i]=i;
+};
+
+vector2=["a","b","c","d","e"];
+
+j=0;
+
+for (i = 0; i < 5; i++) {
+ vector3[j]= vector1[i];
+ j++;
+ vector3[j]= vector2[i];
+ j++;
+};
+
+ console.log("Vector Merge ",vector3);
+
+
 
 
