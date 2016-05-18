@@ -1,0 +1,41 @@
+var cv ={
+	"nombre":"Jorge",
+	"about": "BLALBA",
+	"exp" : [
+	 "Periodo":"2013"},
+	{"Lugar":"GL",
+	 {"Lugar":"Another",
+	  "Periodo":"2010-2013"
+	}],
+	"con":["tec1","tec2"]
+	
+};
+
+
+$.each(cv,function (key,value) { //AGREGADO CON ForEach
+	if(typeof value == "string"){
+		$("#"+key).html(value);
+		}else{
+
+			
+
+			var ul=$("<ul></ul>");
+			$.each(value,function (key,value){
+				if(typeof value == "string"){
+				var li =$("<li></li>");
+					li.html(value);
+					ul.append(li);
+
+
+			}else{
+				
+
+
+			}
+
+			});
+			$("#"+key).append(ul);
+
+		}
+	
+});
