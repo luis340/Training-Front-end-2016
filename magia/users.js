@@ -58,7 +58,9 @@ module.exports = function(server){
 	 		if(usuarios[userId]){
 	 			delete (usuarios[userId]);//BORRA EL QUE LE PASAS POR ID
 	 			//usuarios.pop(userId);//Borra solo el ultimo elemento	 		;
+	 			usuarios = usuarios.filter( function(usuario) { return !!usuario; }); // Filtra el array y elimina los null que quedan dps del delete
 	 			res.send(200,'borro el user');
+
 	 			
 
 	 	}else{
