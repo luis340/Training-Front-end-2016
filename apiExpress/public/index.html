@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>LOGIN</title>
+	<meta charset="UTF-8">	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<style>
+ 	 .form-group .help-block{
+ 	  display: none;
+ 	 }
+  
+  	.form-group.has-error.required .help-block.required{
+  	 display: block;
+ 	 }
+  
+  	.form-group.has-error.invalid .help-block.invalid{
+   	display: block;
+  	}
+ 	</style>
+</head>	
+<body>
+	
+
+	<form action='' >
+		<div class='form-group '>
+			<label class="control-label" for="inputWarning">Usuario</label>	
+			<input type='text'class="form-control" id="inputWarning" placeholder='USUARIO'></input>
+			<span class="help-block required">User Required</span>
+			<span class="help-block invalid">User Invalid</span>
+		</div>
+		<div class='form-group '>
+			<label class="control-label" for="inputWarning">Password</label>	
+			<input type='password' class="form-control" id="inputWarning"  placeholder='PASSWORD'> </input>
+			<span class="help-block required">Pass Invalid</span>
+		</div>
+		<input type='submit'class="btn btn-primary" value="Enviar" > </input>
+		
+
+	</form>
+	
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+
+</body>
+</html>	
