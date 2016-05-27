@@ -7,10 +7,12 @@ $(function(){
 				$('.container').append('<button id="2">'+ 'Mostar 1'+'</button>');
 				$('.container').append('<button id="3">'+ 'Agregar'+'</button>');
 				$('.container').append('<button id="4">'+ 'Borrar'+'</button>');
+				$('.container').append('<button id="5">'+ 'TO-DO'+'</button>');
 				$('#1').on('click',fullLIst);
 				$('#2').on('click',idPer);
 				$('#3').on('click',addUser);
 				$('#4').on('click',deleteUser);
+				$('#5').on('click',toDo);
 			});
 
 			fullLIst();	
@@ -58,15 +60,10 @@ $(function(){
 
 	function idPer(){
 
-	$('#inp').remove();
-	$('#btn').remove();	
-	$('.container').append('<input id="inp">' +'</input>');
-	
+	redu();
 	$('.container').append('<button id="btn">'+ 'Buscar'+'</button>');
 
-	$('#ess').remove();
-	$('.container').append('<row id="ess">'+'</row>');
-
+	
 	$('#btn').off('click').on('click', function() {
 		$('#ess').remove();
 		$('.container').append('<row id="ess">'+'</row>');
@@ -102,8 +99,13 @@ $(function(){
 }// cierra funcion Idper
 
 	function addUser(){
-			
-
+		
+		$('#inp').remove();
+		$('#btn').remove();		
+		$('#inp1').remove();
+		$('#inp2').remove();
+		$('#inp3').remove();
+		$('#add').remove();
 		$('#ess').remove();
 		$('.container').append('<row id="ess">'+'</row>');
 
@@ -150,14 +152,11 @@ $(function(){
 
 		function deleteUser(){
 
-	$('#inp').remove();
-	$('#btn').remove();	
-	$('.container').append('<input id="inp">' +'</input>');
-	
-	$('.container').append('<button id="btn">'+ 'Eliminar'+'</button>');
+			redu();
+			
+			$('.container').append('<button id="btn">'+ 'Eliminar'+'</button>');
 
-	$('#ess').remove();
-	$('.container').append('<row id="ess">'+'</row>');
+			
 
 	$('#btn').off('click').on('click', function() {
 		$('#ess').remove();
@@ -191,7 +190,66 @@ $(function(){
 	return false;
 }// cierra funcion Idper
 
+	function redu(){
 
+	$('#inp').remove();
+	$('#btn').remove();	
+	$('.container').append('<input id="inp">' +'</input>');
+	
+	
+
+	$('#ess').remove();
+	$('.container').append('<row id="ess">'+'</row>');
+
+	}
+
+
+
+
+	function toDo (){
+		
+		$('#6').remove();
+		$('#inp').remove();
+		$('#btn').remove();		
+		$('#inp1').remove();
+		$('#inp2').remove();
+		$('#inp3').remove();
+		$('#add').remove();
+		$('#ess').remove();
+		$('.container').append('<row id="ess">'+'</row>');
+		$('#ess').append('<form>'+'</form>');
+		$('form').append('<p>'+'TO-DO LIST'+'</p>'+'<input id="inp1" placeholder="Agregar nueva tarea">'+'</input>');
+
+
+
+		$('#6').on('click',limpiar);
+		
+
+
+
+		$('form').on('submit', agregarTarea);
+   			function agregarTarea(){
+   				var todo = $('#inp1').val();
+   				
+   				
+   				$('form').append('<br>'+'<span>'+todo+'</span>'+'<button id="6">'+ 'X' +'</button>');
+   				
+       			return false;
+   			}
+   			
+	}
+
+
+	function limpiar(){
+
+
+		$('span').remove();
+		$('#6').remove();
+		
+
+
+
+	}
 
 
 });
