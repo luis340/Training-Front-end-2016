@@ -63,7 +63,7 @@ server.get('/persona/:id',function(req,res,next){
 
 	 			};
 
-	 			//res.send(200,personas[userId]); //si encuentra usuario , lo devuelve
+	 			
 
 	 		}
 	 		else{res.send(404,'Usuario Invalido')} //devuelve mensaje de error si el usuario invalido 
@@ -93,9 +93,9 @@ server.post('/persona/',function(req,res,next){
    var id = personas.length ;
  	var user = {}; //creo un objeto user
   			  user.id=id+1;
-  			  user.nombre = req.query.nombre;
-  			  user.edad = req.query.edad;
-  			  user.email = req.query.email;
+  			  user.nombre = req.body.nombre;
+  			  user.edad = req.body.edad;
+  			  user.email = req.body.email;
   			  
 	 		  personas.push(user);
 	 		
@@ -108,6 +108,24 @@ server.post('/persona/',function(req,res,next){
 
 	 		});
 
+			server.delete('/persona/:id',function(req,res,next){
+			var userId = req.params.id;
+				 		if(userId){
+
+				 			for(var i =0 ; i < personas.length; i++) {
+				 				if(personas[i].id == userId){
+				 					personas.splice(i,1);
+				 					res.send(200,'usuario elim')
+
+				 			};
+				 		}
+				 	}else{res.send(404,'Usuario Invalido')} //devuelve mensaje de error si el usuario invalido 
+
+				 		return next();
+
+				 	
+
+			});
 
 
 
