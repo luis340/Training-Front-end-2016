@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Calculadora</title>
+	<meta charset="UTF-8">	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>	
+<body>
+	<div class="container" >
+		<h1>Calculadora</h1>
+		<div class="row">			
+			<div class="col-sm-6">
+				<input class="input" id="inp" placeholder="0"></input>
+			</div>
+		</div>
+		<div class="col-sm-4">
+				<div class="row">
+					<div class="col-sm-1"><button type="button" id="7" class="btn btn-primary butonNumero">7</button></div>
+					<div class="col-sm-1"><button type="button" id="8" class="btn btn-primary butonNumero">8</button></div>
+					<div class="col-sm-1"><button type="button" id="9" class="btn btn-primary butonNumero">9</button></div>
+					<div class="col-sm-1"><button type="button" id="barra" class="btn btn-primary operacion" data-operacion="dividir">/</button></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-1"><button type="button" id="4" class="btn btn-primary butonNumero">4</button></div>
+					<div class="col-sm-1"><button type="button" id="5" class="btn btn-primary butonNumero">5</button></div>
+					<div class="col-sm-1"><button type="button" id="6" class="btn btn-primary butonNumero">6</button></div>
+					<div class="col-sm-1"><button type="button" id="mul" class="btn btn-primary operacion" data-operacion="multiplicar">*</button></div>
+				</div>
+				<div class="row">	
+					<div class="col-sm-1"><button type="button" id="1"class="btn btn-primary butonNumero">1</button></div>
+					<div class="col-sm-1"><button type="button" id="2"class="btn btn-primary butonNumero">2</button></div>
+					<div class="col-sm-1"><button type="button" id="3"class="btn btn-primary butonNumero">3</button></div>
+					<div class="col-sm-1"><button type="button" id="res"class="btn btn-primary operacion" data-operacion="restar">-</button></div>
+				</div>
+					<div class="row">	
+					<div class="col-sm-1"><button type="button" id="0" class="btn btn-primary butonNumero" >0</button></div>
+					<div class="col-sm-1"><button type="button" id="igual" class="btn btn-warning operacion" data-operacion="igual">=</button></div>
+					<div class="col-sm-1"><button type="button" id="cls" class="btn btn-danger operacion" data-operacion="cls">C</button></div>
+					<div class="col-sm-1"><button type="button" id="suma" class="btn btn-primary operacion" data-operacion="sumar">+</button></div>
+				</div>	
+			</div>	
+		</div>
+
+	</div>
+	
+		
+
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/calculadora.js"></script>
+
+</body>
+</html>		
