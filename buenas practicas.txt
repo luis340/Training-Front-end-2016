@@ -1,0 +1,12 @@
+$(function(){
+
+    //declaracion de variables
+    
+    // guardar selectores de jquery
+    var form = $('form');
+
+    // ejecutar tareas iniciales
+    
+    // declarar las funciones  
+    
+});

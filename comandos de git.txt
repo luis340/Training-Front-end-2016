@@ -1,0 +1,9 @@
+GIT COMANDOS
+
+
+
+cd "nombre carpeta"
+copiar los archivos
+git add .-A "agrega los archivos al git local"
+git commit -m"MENSAJE" actualiza 
+git push se usa cuando se agregan nuevos datos 

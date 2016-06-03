@@ -1,0 +1,64 @@
+Responsive -Forma vieja-
+
+<meta name = "viewport" content= "width=device-width" , initial-scale=1> /* con esto me aseguro que tome las medidas de los pixeles reales del
+										dispositivo en el que se este viendo. va en el head */
+
+
+
+@media(max-width:767px){
+	/*Para celular*/
+	body{
+
+		background-color:red;
+
+
+		}
+
+	
+
+}
+
+@media(min-width:768px)and(max-width:1000px)
+	/*Para tablet*/
+	body{
+		backgroud-color:blue;
+		
+}
+
+@media(min-width:1001px)and(max-width:4080px)
+	/*Para navegador*/
+	body{
+		backgroud-color:green;
+		
+}
+
+
+Responsive -Forma ACtual-(mobile first)
+
+directamente se pone para celular  /*no se hace ninguna media query para optimizar el calculo*/
+
+
+body{
+
+		background-color:red;
+
+
+		}
+
+	
+
+}
+
+@media(min-width:768px)and(max-width:1000px)
+	/*Para tablet*/
+	body{
+		backgroud-color:blue;
+		
+}
+
+@media(min-width:1001px)and(max-width:4080px)
+	/*Para navegador*/
+	body{
+		backgroud-color:green;
+		
+}
