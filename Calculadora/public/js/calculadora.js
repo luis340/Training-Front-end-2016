@@ -1,6 +1,5 @@
 var calculadora = (function calc(){
-	var  num = 1;
-		 resultado=0;	 
+	var   resultado=0;		 
 	function sumar (input){
 		 input=tryParse(input);
 		 resultado += input;
@@ -24,7 +23,7 @@ var calculadora = (function calc(){
 	}
 	function multi(input){
 		input=tryParse(input);
-		resultado = num * input;
+		resultado = resultado * input;
 		return resultado;
 
 	}
@@ -35,7 +34,6 @@ var calculadora = (function calc(){
 	}
 
 	function init(){
-		num=1;
 		resultado=0;
 
 	}
@@ -55,6 +53,10 @@ var calculadora = (function calc(){
 		return (resultado);
 
 	}
+	function obtenerValor(){
+		return resultado;
+	}
+
 	return {
 
 		sumar:sumar,
@@ -62,57 +64,19 @@ var calculadora = (function calc(){
 		dividir:dividir,
 		multi:multi,
 		cls:cls,
-		asignarValor:asignarValor
-
+		asignarValor:asignarValor,
+		obtenerValor:obtenerValor
 	}
 })();
 
 
 
-/*$(function(){
-	var  form = $('.container');
-
-	form.find('#1').on('click',uno);
-	form.find('#2').on('click',dos);
-	form.find('#3').on('click',tres);
-	form.find('#4').on('click',cuatro);
-	form.find('#5').on('click',cinco);
-	form.find('#6').on('click',seis);
-	form.find('#7').on('click',siete);
-	form.find('#8').on('click',ocho);
-	form.find('#9').on('click',nueve);
-	form.find('#0').on('click',cero);
-	form.find('#barra').on('click',dividir);
-	form.find('#mul').on('click',multi);
-	form.find('#res').on('click',res);
-	form.find('#suma').on('click',sum);
-	form.find('#igual').on('click',igual);
-	form.find('#cls').on('click',borrar);
-	
-	function uno(){
-		calculadora.sumar(5);
-		console.log(resultado);
-
-	}
-	function igual(){
-		console.log('TE MANDO EL VALOR AMEGO');
-
-	}
-	function sum(){
-
-
-	}
-
-	function borrar(){
-		calculadora.cls();
-
-	}*/
-
 $(function(){
     var $calc,
         inputNumero,
         operacion,
-        concatenaNumero;
+        concatenaNumero,
+        numero;
 
     init(); 
     
@@ -139,26 +103,33 @@ $(function(){
         
         // si aprete una operacion => reemplaza el numero
         if(!operacion){
-			calculadora.asignarValor(numero);        	
+        	calculadora.asignarValor(numero);        	
         }
     }
     
     function onOperationPress(){
         var nuevaOperacion = $(this).data('operacion');
-        concatenaNumero=false;
+        
 
+        concatenaNumero=false;
         if(nuevaOperacion ==='cls'){
         	return clear();
         }
-        if (nuevaOperacion === 'igual'&& operacion){
-        	var resultado = calculadora[operacion](inputNumero.val());
-        	inputNumero.val(resultado);
-        	console.log(resultado);
-
+        if (nuevaOperacion === 'igual'){
+        	if(operacion){
+	        	var resultado = calculadora[operacion](inputNumero.val());
+	        	inputNumero.val(resultado);
+	        	console.log(resultado);
+        	}	
+        	return;
+        }if(nuevaOperacion){ 
+        	numero=parseInt(inputNumero.val(),10);
+        	operacion=nuevaOperacion;
         }
-        operacion=nuevaOperacion;
+        
         console.log(operacion);
-    }
+        //console.log(mantengo);
+    };
 
     function clear(){
     	inputNumero.val(calculadora.cls());
