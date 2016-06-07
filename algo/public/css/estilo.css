@@ -1,0 +1,33 @@
+.formulario{
+	font-family:fuentemagica;
+	border: red solid;
+	background-color: black;
+
+
+
+
+
+}
+
+h1{
+	text-align:center;
+
+
+
+}
+
+.rec{
+	border: black solid;
+	background-color: red;
+
+}
+button{
+	text-align: center;
+
+}
+
+@font-face{
+	 font-family:fuentemagica;
+   	 src: url(/font/IndieFlower.ttf);
+
+}
