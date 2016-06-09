@@ -53,15 +53,44 @@ var miClosure = (function() {
 								   '<td>'+data[i].experience+'</td>'+
 								   '<td>'+'<button id="'+i+'" class="btn btn-danger">'+'Modificar'+'</button>'+'</tr>'; 
 					$('#tablaM').append(remplazo);
-
+					$('#lista').append('</table>');
 					$('#'+i).attr('data-id',i).on('click',function(){
+						//aca modifica en "teoria" 
 						var iN = $(this).attr('data-id');
 						console.log(iN);
+						//toma valor
+							var user={
+									firstName: form.find('#nombre').val(),
+									lastName: form.find('#apellido').val(),
+									gender: form.find('#sexo').val(),
+									birthday: form.find('#date').val(),
+									address: form.find('#dir').val(),
+									photo: form.find('#photo').val(),
+									email: form.find('#mail').val(),
+									password: form.find('#pass').val(),
+									education: form.find('#edu').val(),
+									experience: form.find('#exp').val()
+
+								};
+
+
+
+						$.ajax({
+							url:'https://connectedin.herokuapp.com/person/'+data[iN]._id,
+							method:'PUT',
+							data:JSON.stringify(user),
+							contentType:'application/json',
+							success:function(data){
+								alert('Usuario Modificado');
+							} 
+
+
+						})
+
 					});
 							
 				}// cierra el for
 				
-				$('#lista').append('</table>');
 								 
 				
 			}
@@ -87,7 +116,7 @@ var miClosure = (function() {
 			experience: form.find('#exp').val()
 
 		};
-		console.log(user);
+		
 		$.ajax({
 			url:'https://connectedin.herokuapp.com/person', 
 			method:'post',
